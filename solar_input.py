@@ -94,10 +94,10 @@ def write_space_objects_data_to_file(output_filename, space_objects):
     """
     with open(output_filename, 'w') as out_file:
         for obj in space_objects:
-            stroka = obj.type + '   ' + str(obj.R) + '   ' + obj.color + '   ' + str(obj.m) + '   ' + str(obj.x) + '   ' + str(obj.y) + '   ' + str(obj.Vx) + '   ' + str(obj.Vy)
+            stroka = obj.type + '   ' + str(obj.R) + '   ' + obj.color + '   ' + str(obj.m) + '   ' + str(round(obj.x,3)) + '   ' + str(round(obj.y,3)) + '   ' + str(round(obj.Vx,3)) + '   ' + str(round(obj.Vy,3))
             out_file.write( stroka + '\n' )
 
-# FIXME: хорошо бы ещё сделать функцию, сохранающую статистику в заданный файл...
+#  FIXME: хорошо бы ещё сделать функцию, сохранающую статистику в заданный файл...
 
 
 if __name__ == "__main__":
